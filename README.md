@@ -58,9 +58,9 @@ This project is developed in Kotlin.
 ./gradlew assembleDebug
 ```
 
-### Development Plan
+### Changelog
 
-See [`PhantomSwap_Project_Master_Compendium.md`](PhantomSwap_Project_Master_Compendium.md) for detailed development plan.
+See [`changelog.md`](changelog.md) for release notes and notable changes.
 
 ## License
 
