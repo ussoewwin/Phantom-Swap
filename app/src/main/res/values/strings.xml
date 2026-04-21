@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Phantom Swap</string>
+    <string name="app_title">Phantom Swap</string>
+    <string name="app_subtitle">No Root Virtual Memory Manager</string>
+    <string name="memory_info">MEMORY INFO</string>
+    <string name="total_ram">Total RAM</string>
+    <string name="used_ram">Used RAM</string>
+    <string name="available_ram">Available RAM</string>
+    <string name="swap_status_label">SWAP STATUS</string>
+    <string name="swap_size_label">SWAP SIZE</string>
+    <string name="btn_create">CREATE SWAP</string>
+    <string name="btn_delete">DELETE SWAP</string>
+    <string name="notification_channel_name">Swap Service</string>
+    <string name="notification_channel_desc">Swap memory management service</string>
+</resources>

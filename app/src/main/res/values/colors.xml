@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- App Colors -->
+    <color name="background_dark">#FF121218</color>
+    <color name="card_background">#FF1E1E2A</color>
+    <color name="accent">#FF00BCD4</color>
+    <color name="accent_dark">#FF008394</color>
+    <color name="text_primary">#FFFAFAFA</color>
+    <color name="text_secondary">#FF9E9EAE</color>
+    <color name="swap_active">#FF4CAF50</color>
+    <color name="swap_inactive">#FF757585</color>
+    <color name="warning">#FFFFAB40</color>
+    <color name="delete_button">#FFD32F2F</color>
+</resources>
