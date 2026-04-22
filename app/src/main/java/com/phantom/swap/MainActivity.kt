@@ -8,8 +8,6 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.os.PowerManager
-import android.provider.Settings
 import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
@@ -21,7 +19,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import android.net.Uri
 
 class MainActivity : AppCompatActivity() {
 
@@ -53,7 +50,6 @@ class MainActivity : AppCompatActivity() {
         setupListeners()
         autoRestoreSwap()
         requestNotificationPermission()
-        checkBatteryOptimization()
         startMemoryMonitor()
     }
 
@@ -315,25 +311,6 @@ class MainActivity : AppCompatActivity() {
                     arrayOf(Manifest.permission.POST_NOTIFICATIONS),
                     100
                 )
-            }
-        }
-    }
-
-    private fun checkBatteryOptimization() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            val pm = getSystemService(Context.POWER_SERVICE) as PowerManager
-            if (!pm.isIgnoringBatteryOptimizations(packageName)) {
-                AlertDialog.Builder(this)
-                    .setTitle("Battery Optimization")
-                    .setMessage("To keep Swap ACTIVE while the screen is off, please set battery usage to 'Unrestricted' (Don't optimize).")
-                    .setPositiveButton("Settings") { _, _ ->
-                        val intent = Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS).apply {
-                            data = Uri.parse("package:$packageName")
-                        }
-                        startActivity(intent)
-                    }
-                    .setNegativeButton("Later", null)
-                    .show()
             }
         }
     }

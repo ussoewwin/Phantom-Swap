@@ -8,6 +8,15 @@ The format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.
 
 ## [Unreleased]
 
+### Changed
+
+- **Battery optimization UX:** Removed the automatic battery-optimization exclusion prompt from `MainActivity` (`checkBatteryOptimization()` flow and related settings intent). The app no longer opens the system exclusion request dialog on launch.
+- **Power-management strategy:** Focus shifted to service-side resilience instead of launch-time permission prompting (foreground service + wake lock + watchdog + periodic health checks remain active).
+
+### Notes
+
+- `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS` is still declared in `AndroidManifest.xml`; if this UX is intentionally retired, the permission can be removed in a follow-up cleanup.
+
 ### Planned / discussed (not shipped as product requirements)
 
 - Google Play distribution and pricing experiments (one-time, ads, freemium).
